@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="main">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js"></script>
+    <script src="/app.js"></script>
+    <script src="/components/submission-list/submission-list-controller.js"></script>
+    <link rel="stylesheet" href="http://whoaverse.com/Content/Site.css"></link>
+  </head>
+  <body ng-controller="SubmissionListController">
+    <header>
+      <h1>Whoaverse</h1>
+    </header>
+    <ul>
+      <li ng-repeat="submission in submissions">
+        <a href="{{submission.url}}">{{submission.title}}</a>
+      </li>
+    </ul>
+  </body>
+</html>
