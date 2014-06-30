@@ -1,0 +1,18 @@
+<div class="thing link" ng-controller="SubmissionListitemController">
+  <span class="rank" ng-bind="item.rank"></span>
+  <div class="midcol">
+    <div class="arrow-upvote" ng-click="upvote()"></div>
+    <div class="score" ng-bind="item.score"></div>
+    <div class="arrow-downvote" ng-click="downvote()"></div>
+  </div>
+  <div class="entry">
+    <p class="title">
+      <a class="title" href="{{item.url}}" title="{{item.title}}" ng-bind="item.title"></a>
+      <span class="domain">({{item.domain}})</span>
+    </p>
+    <p class="tagline">submitted <time datetime="{{item.submissionDate}}" ng-bind="item.prettySubmissionDate"></time> by {{item.author}} to {{item.subverse}}</p>
+    <ul class="flat-list buttons">
+      <li><a class="comments" href="#">comments</a></li>
+    </ul>
+  </div>
+</div>

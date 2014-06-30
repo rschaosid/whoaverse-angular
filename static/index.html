@@ -2,19 +2,16 @@
 <html ng-app="main">
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
     <script src="/app.js"></script>
-    <script src="/components/submission-list/submission-list-controller.js"></script>
+    <script src="/routes.js"></script>
+    <script src="/submission-listing/submission-listing-controller.js"></script>
+    <script src="/submission-listitem/submission-listitem-controller.js"></script>
+    <script src="/submission-listitem/submission-listitem-directive.js"></script>
     <link rel="stylesheet" href="http://whoaverse.com/Content/Site.css"></link>
     <link rel="stylesheet" href="http://whoaverse.com/Content/Whoaverse.css"></link>
   </head>
-  <body ng-controller="SubmissionListController">
-    <header>
-      <h1>Whoaverse</h1>
-    </header>
-    <ul>
-      <li ng-repeat="submission in submissions">
-        <a href="{{submission.url}}">{{submission.title}}</a>
-      </li>
-    </ul>
+  <body>
+    <ui-view></ui-view>
   </body>
 </html>

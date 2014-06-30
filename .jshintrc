@@ -15,7 +15,7 @@
   "nonbsp": true,
   "nonew": true,
   "plusplus": false,
-  "quotmark": "single",
+  "quotmark": "double",
   "undef": true,
   "unused": true,
   "strict": false,
@@ -53,6 +53,6 @@
   "supernew": true,
   "noyield": false,
 
-  "node": true,
-  "browser": true
+  "browser": true,
+  "predef": ["angular"]
 }

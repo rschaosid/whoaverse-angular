@@ -1,3 +1,1 @@
-/* global angular */
-
-angular.module('main', []);
+angular.module("main", ["ui.router"]);
