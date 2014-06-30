@@ -54,5 +54,6 @@
   "noyield": false,
 
   "browser": true,
+  "node": true,
   "predef": ["angular"]
 }
