@@ -1,4 +1,4 @@
-angular.module('main').controller('SubversesController', function($scope) {
+angular.module("main").controller("SubversesController", function($scope) {
   $scope.defaultSubverses = [
     "newsubverses",
     "funny",
@@ -24,7 +24,7 @@ angular.module('main').controller('SubversesController', function($scope) {
   ].map(function(name) {
     return {
       name: name,
-      url: '/v/'+name+'/'
+      url: "/v/"+name+"/"
     };
   });
 });
