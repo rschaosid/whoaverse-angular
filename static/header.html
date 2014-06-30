@@ -36,13 +36,17 @@
       </li>
     </ul>
   </div>
-  <form action="/account/logoff" class="nav navbar-nav navbar-right" id="logoutForm" method="post" novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden" value="r8zZtzM1DVxnfuMdXnYr5VbknH3K2_IbZb11bt9sSXCRoDRfAH--k5eY9NthVDCYuj5BABXrMKQhnUJGvMNOcVta4EdkeW1KX9hPgITwZ2-d5HgccJ2V0fFA_ng4BDXa9K-X6gEnMmbz-MW9ooIkCg2">        <div id="header-bottom-right">
-    <span class="user"><a href="/user/cr" title="Profile">cr</a>&nbsp;(<span class="userkarma" title="submission contribution points">15</span>|<span class="userkarma" title="comment contribution points">15</span>)</span>
+  <div class="nav navbar-nav navbar-right"><div id="header-bottom-right">
+    <span class="user" ng-controller="CurrentUserController">
+      <a href="{{user.url}}" title="Profile">cr</a>&nbsp;
+      (<span class="userkarma" title="submission contribution points" ng-bind="user.submissionKarma"></span>
+      |<span class="userkarma" title="comment contribution points" ng-bind="user.commentKarma"></span>)
+    </span>
     <span class="separator">|</span>
     <span class="user"><a href="/account/manage" title="Manage">Manage</a></span>
     <span class="separator">|</span>
     <a title="no new mail" href="#" class="nohavemail" id="mail">messages</a>
     <span class="separator">|</span>
-    <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
-  </form>
+    <a ng-controller="SessionController" href="#" ng-click="logout()">Log off</a>
+  </div></div>
 </div>
