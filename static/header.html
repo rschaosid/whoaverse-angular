@@ -2,11 +2,11 @@
   <div id="sr-header-area">
     <div class="width-clip">
       <div class="sr-list">
-        <ul class="flat-list sr-bar hover">
+        <ul class="flat-list sr-bar">
           <li>
             <a href="/subverses/subscribed">my subverses</a>
           </li>
-          <li class="">
+          <li>
             <span class="separator">-</span><a href="/">front</a>
           </li>
           <li>
@@ -16,90 +16,10 @@
             <span class="separator">-</span><a href="/random" class="random">random</a>
           </li>
         </ul>
-        <ul class="flat-list sr-bar hover" id="sr-bar">
-          <li class="">
+        <ul class="flat-list sr-bar" id="sr-bar" ng-controller="SubversesController">
+          <li ng-repeat="sv in defaultSubverses">
               <span class="separator">-</span>
-              <a href="/v/newsubverses/">newsubverses</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/funny/">funny</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/news/">news</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/videos/">videos</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/technology/">technology</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/science/">science</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/music/">music</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/gaming/">gaming</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/aww/">aww</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/books/">books</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/gifs/">gifs</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/sports/">sports</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/tv/">tv</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/programming/">programming</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/cats/">cats</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/movies/">movies</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/politics/">politics</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/askwhoa/">askwhoa</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/pics/">pics</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/ideasforwhoaverse/">ideasforwhoaverse</a>
-          </li>
-          <li class="">
-              <span class="separator">-</span>
-              <a href="/v/introductions/">introductions</a>
+              <a href="{{sv.url}}" ng-bind="sv.name"></a>
           </li>
         </ul>
       </div>
