@@ -38,9 +38,12 @@
   </div>
   <div class="nav navbar-nav navbar-right"><div id="header-bottom-right">
     <span class="user" ng-controller="CurrentUserController">
-      <a href="{{user.url}}" title="Profile">cr</a>&nbsp;
-      (<span class="userkarma" title="submission contribution points" ng-bind="user.submissionKarma"></span>
-      |<span class="userkarma" title="comment contribution points" ng-bind="user.commentKarma"></span>)
+      <a href="{{user.url}}" title="Profile">cr</a>
+      (
+      <span class="userkarma" title="submission contribution points" ng-bind="user.submissionKarma"></span>
+      |
+      <span class="userkarma" title="comment contribution points" ng-bind="user.commentKarma"></span>
+      )
     </span>
     <span class="separator">|</span>
     <span class="user"><a href="/account/manage" title="Manage">Manage</a></span>
