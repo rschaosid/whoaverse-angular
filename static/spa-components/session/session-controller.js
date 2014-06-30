@@ -1,5 +1,5 @@
-angular.module('main').controller('SessionController', function($scope) {
+angular.module("main").controller("SessionController", function($scope) {
   $scope.logout = function() {
-    console.log('log out');
+    console.log("log out");
   };
 });
