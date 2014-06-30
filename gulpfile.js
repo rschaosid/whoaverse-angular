@@ -2,7 +2,7 @@ var gulp = require("gulp");
 var jshint = require("gulp-jshint");
 var jshint_stylish = require("jshint-stylish");
 
-var scripts = ["./static/**/*.js"] //, "./test/**/*.js"]
+var scripts = ["./static/**/*.js", "./bridge.js", "./gulpfile.js", ".jshintrc"] //, "./test/**/*.js"]
 
 gulp.task("watch", function() {
   gulp.watch(scripts, ["lint", "build"]);
